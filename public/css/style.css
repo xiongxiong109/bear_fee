@@ -1,0 +1,111 @@
+*{margin: 0;padding: 0;}
+
+.admin-show-wrap {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	z-index: 6;
+	display: -webkit-box;
+	display: box;
+	-webkit-box-align: center;
+	box-align: center;
+	-webkit-box-pack: center;
+	box-pack: center;
+	font-family: monaco;
+}
+.admin-show-content {
+	background-color: rgba(125, 125, 125, 0.8);
+	padding: 16px 10px;
+	color: #fff;
+	border-radius: 8px;
+	animation: zoomIn .3s cubic-bezier(.3,1.41,.51,.99) both;
+}
+code {font-family: monaco;}
+.shadow {
+	color: #002B3A;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5), 0 -1px 0 rgba(255, 255, 255, 0.5);
+}
+
+/*step*/
+.step {
+	width: 100vw;
+	height: 100vh;
+	border: 1px solid #ccc;
+	box-shadow: 4px 4px 6px #efefef;
+	background-color: #efefef;
+	background-image: linear-gradient(hsla(0, 0%, 100%, .4), transparent);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*s1*/
+.s1 {
+	text-align: center;
+	display: table;
+	background-color: #555;
+}
+
+.s1 .step-content {
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 20px;
+	perspective:800px;
+}
+
+.s1 .step-content h1 {
+	color:rgba(0,0,0,0.1);
+	font-size: 60px;
+	background-image: url("../img/bg.gif");
+	/*background-size: cover;*/
+	/*background-repeat: no-repeat;*/
+	-webkit-background-clip: text;
+	position: relative;
+}
+.s1 .step-content p, .s1 .step-content h3 {
+	position: relative;
+}
+
+.s1 .step-content .bg-img {
+	width: 300px;
+	opacity: 0.5;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	z-index: 0;
+	opacity: 0;
+	transform-origin:center -100px;
+	transform-style:preserve-3d;
+}
+.s1.present .step-content .bg-img {
+	animation: rotateZoomIn 1s cubic-bezier(.17,.67,.46,1.29) both;
+}
+
+/*animations*/
+@keyframes zoomIn {
+	from {
+		background-color: rgba(125, 125, 125, 0);
+		transform:scale(8);
+	}
+	to {
+		background-color: rgba(125, 125, 125, 0.8);
+		transform:scale(1);
+	}
+}
+
+@keyframes rotateZoomIn {
+	from {
+		transform: rotateX(-270deg);
+		opacity: 0;
+	}
+	to {
+		transform: rotateX(0deg);
+		opacity: 0.5;
+	}
+}

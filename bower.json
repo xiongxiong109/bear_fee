@@ -1,0 +1,30 @@
+{
+  "name": "bear_fee",
+  "description": "前端演示作品",
+  "main": "app.js",
+  "authors": [
+    "xiongxiong109"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "nodejs",
+    "express",
+    "impress",
+    "socket"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./public/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.2.4"
+  }
+}
